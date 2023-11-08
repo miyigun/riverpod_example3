@@ -12,10 +12,10 @@ class StateProviderExample extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final stateProviderIntegerObject = ref.watch(stateProviderInteger).state;
-    final stateProviderNameObject = ref.watch(stateProviderName).state;
-    final stateProviderCityObject = ref.watch(stateProviderCity).state;
-    final stateProviderInstance = ref.watch(stateProviderClass).state;
+    final stateProviderIntegerObject = ref.watch(stateProviderInteger);
+    final stateProviderNameObject = ref.watch(stateProviderName);
+    final stateProviderCityObject = ref.watch(stateProviderCity);
+    final stateProviderInstance = ref.watch(stateProviderClass);
 
     return Padding(
       padding: const EdgeInsets.all(10.0),
