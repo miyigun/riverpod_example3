@@ -12,7 +12,7 @@ class RaiseAndReduceAgeOfLittleMonk extends ConsumerWidget {
       child: Column(
         children: [
           ElevatedButton(
-            onPressed: () => changeLittleMonk(context, ref),
+            onPressed: () => changeLittleMonk(ref),
             child: const Text(
               'Grow Little Monk',
               style: TextStyle(
@@ -22,7 +22,7 @@ class RaiseAndReduceAgeOfLittleMonk extends ConsumerWidget {
           ),
           const VerticalDivider(),
           ElevatedButton(
-            onPressed: () => reverseAgeOfLittleMonk(context, ref),
+            onPressed: () => reverseAgeOfLittleMonk(ref),
             child: const Text(
               'Reverse Age of Little Monk',
               style: TextStyle(
