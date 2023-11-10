@@ -13,9 +13,9 @@ class ClearNameAndCity extends ConsumerWidget {
       child: Row(
         children: [
           ElevatedButton(
-            onPressed: () => clearName(context, ref),
+            onPressed: () => clearName(ref),
             child: const Text(
-              'Change name',
+              'Clear name',
               style: TextStyle(
                 fontSize: 20.0,
               ),
@@ -23,9 +23,9 @@ class ClearNameAndCity extends ConsumerWidget {
           ),
           const HorizontalSpace(),
           ElevatedButton(
-            onPressed: () => clearCity(context, ref),
+            onPressed: () => clearCity(ref),
             child: const Text(
-              'Change City',
+              'Clear City',
               style: TextStyle(
                 fontSize: 20.0,
               ),

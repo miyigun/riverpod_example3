@@ -20,7 +20,7 @@ class CounterWidget extends ConsumerWidget {
         ),
         const HorizontalSpace(),
         FloatingActionButton(
-          onPressed: () => increment(context, ref),
+          onPressed: () => increment(ref),
           tooltip: 'Increment',
           child: const Icon(Icons.add),
         ),
