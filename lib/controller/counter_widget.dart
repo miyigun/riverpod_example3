@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_example3/controller/controller.dart';
 import 'package:riverpod_example3/controller/horizontal_space.dart';
-import 'package:riverpod_example3/model/state_provider_model.dart';
 
-class CounterWidget extends StatelessWidget {
+class CounterWidget extends ConsumerWidget {
   const CounterWidget({super.key, required this.stateProviderIntegerObject});
 
   final int stateProviderIntegerObject;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Row(
       children: [
         Text(
@@ -21,8 +20,7 @@ class CounterWidget extends StatelessWidget {
         ),
         const HorizontalSpace(),
         FloatingActionButton(
-          onPressed: () =>
-              increment(context, stateProviderInteger as WidgetRef),
+          onPressed: () => increment(context, ref),
           tooltip: 'Increment',
           child: const Icon(Icons.add),
         ),
