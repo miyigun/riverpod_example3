@@ -13,7 +13,7 @@ class ChangeNameAndCity extends ConsumerWidget {
       child: Row(
         children: [
           ElevatedButton(
-            onPressed: () => changeName(context, ref),
+            onPressed: () => changeName(ref),
             child: const Text(
               'Change name',
               style: TextStyle(
@@ -23,7 +23,7 @@ class ChangeNameAndCity extends ConsumerWidget {
           ),
           const HorizontalSpace(),
           ElevatedButton(
-            onPressed: () => changeCity(context, ref),
+            onPressed: () => changeCity(ref),
             child: const Text(
               'Change City',
               style: TextStyle(
