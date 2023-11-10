@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_example3/controller/controller.dart';
+import 'package:riverpod_example3/model/state_provider_model.dart';
 
 class RaiseAndReduceAgeOfLittleMonk extends StatelessWidget {
   const RaiseAndReduceAgeOfLittleMonk({super.key});
@@ -11,7 +13,8 @@ class RaiseAndReduceAgeOfLittleMonk extends StatelessWidget {
       child: Row(
         children: [
           ElevatedButton(
-            onPressed: () => changeLittleMonk(context),
+            onPressed: () =>
+                changeLittleMonk(context, stateProviderClass as WidgetRef),
             child: const Text(
               'Grow Little Monk',
               style: TextStyle(
@@ -21,7 +24,8 @@ class RaiseAndReduceAgeOfLittleMonk extends StatelessWidget {
           ),
           const VerticalDivider(),
           ElevatedButton(
-            onPressed: () => reverseAgeOfLittleMonk(context),
+            onPressed: () => reverseAgeOfLittleMonk(
+                context, stateProviderClass as WidgetRef),
             child: const Text(
               'Reverse Age of Little Monk',
               style: TextStyle(

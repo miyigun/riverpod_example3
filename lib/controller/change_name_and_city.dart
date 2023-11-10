@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_example3/controller/controller.dart';
 import 'package:riverpod_example3/controller/horizontal_space.dart';
+import 'package:riverpod_example3/model/state_provider_model.dart';
 
 class ChangeNameAndCity extends StatelessWidget {
   const ChangeNameAndCity({super.key});
@@ -12,7 +14,8 @@ class ChangeNameAndCity extends StatelessWidget {
       child: Row(
         children: [
           ElevatedButton(
-            onPressed: () => changeName(context),
+            onPressed: () =>
+                changeName(context, stateProviderName as WidgetRef),
             child: const Text(
               'Change name',
               style: TextStyle(
@@ -22,7 +25,8 @@ class ChangeNameAndCity extends StatelessWidget {
           ),
           const HorizontalSpace(),
           ElevatedButton(
-            onPressed: () => changeCity(context),
+            onPressed: () =>
+                changeCity(context, stateProviderCity as WidgetRef),
             child: const Text(
               'Change City',
               style: TextStyle(

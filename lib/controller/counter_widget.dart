@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_example3/controller/controller.dart';
 import 'package:riverpod_example3/controller/horizontal_space.dart';
+import 'package:riverpod_example3/model/state_provider_model.dart';
 
 class CounterWidget extends StatelessWidget {
   const CounterWidget({super.key, required this.stateProviderIntegerObject});
@@ -19,7 +21,8 @@ class CounterWidget extends StatelessWidget {
         ),
         const HorizontalSpace(),
         FloatingActionButton(
-          onPressed: () => increment(context),
+          onPressed: () =>
+              increment(context, stateProviderInteger as WidgetRef),
           tooltip: 'Increment',
           child: const Icon(Icons.add),
         ),
